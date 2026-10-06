@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+outputs/
+*.safetensors
+*.egg-info/
+uv.lock

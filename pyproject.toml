@@ -1,0 +1,24 @@
+[project]
+name = "pyramid-jit"
+version = "0.1.0"
+description = "P-JiT (Pyramid-JiT): a pixel-space text-to-image diffusion transformer by Linum"
+readme = "README.md"
+license = "Apache-2.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.10",
+    "transformers>=5.5",
+    "safetensors>=0.5",
+    "huggingface_hub>=0.30",
+    "numpy",
+    "triton; platform_system == \"Linux\"",  # seeded-noise kernel (noise.py); ships with torch
+    "pillow",
+    "tqdm",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pyramid_jit"]
